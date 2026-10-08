@@ -1,0 +1,84 @@
+site_name: Advanced Duels Wiki
+site_description: Complete documentation for the Advanced Duels Minecraft plugin - installation, configuration, commands, permissions and more.
+site_author: Advanced Duels
+
+theme:
+  name: material
+  custom_dir: overrides
+  palette:
+    - scheme: default
+      primary: green
+      accent: light green
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: green
+      accent: light green
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.tabs.link
+
+extra_css:
+  - stylesheets/extra.css
+
+copyright: Advanced Duels documentation
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.details
+
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Installation: getting-started/installation.md
+      - First Setup: getting-started/first-setup.md
+  - Configuration:
+      - Overview: configuration/index.md
+      - Config Reference: configuration/config-reference.md
+      - Messages & Languages: configuration/languages.md
+  - Arenas:
+      - Creating & Managing: arenas/index.md
+      - Regeneration: arenas/regeneration.md
+  - Kits: kits/index.md
+  - Duels:
+      - Starting a Duel: duels/index.md
+      - Requests: duels/requests.md
+      - Match Flow: duels/match-flow.md
+      - Betting: duels/betting.md
+      - Party Duels: duels/party-duels.md
+      - Rating & Stats: duels/rating-stats.md
+  - Queue & Signs: queue.md
+  - Spectating: spectating.md
+  - Commands:
+      - Player Commands: commands/player.md
+      - Admin Commands: commands/admin.md
+  - Permissions: permissions.md
+  - Placeholders: placeholders.md
+  - GUIs: guis.md
+  - Integrations: integrations.md
+  - Data & Backups: data.md
+  - FAQ: faq.md
+  - Troubleshooting: troubleshooting.md
+  - Developer API: api.md

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{# Appended site footer: version/compat strip + quick links.
+   Uses base_url so links work from any page depth and any deploy subpath. #}
+{% block footer %}
+  {{ super() }}
+  <div class="md-grid">
+    <div class="ad-footer-extra">
+      <span><strong>Advanced Duels</strong> v5.0 &middot; Paper &amp; Spigot 1.21 &middot; Java 21 &middot; Folia supported</span>
+      <nav aria-label="Footer">
+        <a href="{{ base_url }}/">Documentation</a>
+        <a href="{{ base_url }}/commands/player/">Commands</a>
+        <a href="{{ base_url }}/permissions/">Permissions</a>
+        <a href="{{ base_url }}/placeholders/">Placeholders</a>
+        <a href="{{ base_url }}/api/">Developer API</a>
+      </nav>
+    </div>
+  </div>
+{% endblock %}

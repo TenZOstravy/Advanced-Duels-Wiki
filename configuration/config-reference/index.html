@@ -1,0 +1,2675 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Complete documentation for the Advanced Duels Minecraft plugin - installation, configuration, commands, permissions and more.">
+      
+      
+        <meta name="author" content="Advanced Duels">
+      
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../languages/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Config Reference - Advanced Duels Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="light-green">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#configyml-reference" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Advanced Duels Wiki" class="md-header__button md-logo" aria-label="Advanced Duels Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Advanced Duels Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Config Reference
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="light-green"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="light-green"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../getting-started/installation/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Getting Started
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Configuration
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../arenas/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Arenas
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../kits/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kits
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../duels/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Duels
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../queue/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Queue & Signs
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../spectating/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Spectating
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../commands/player/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Commands
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../permissions/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Permissions
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../placeholders/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Placeholders
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../guis/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  GUIs
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../integrations/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Integrations
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../data/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Data & Backups
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../faq/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  FAQ
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../troubleshooting/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Troubleshooting
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../api/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Developer API
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Advanced Duels Wiki" class="md-nav__button md-logo" aria-label="Advanced Duels Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Advanced Duels Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Getting Started
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/first-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    First Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Configuration
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Config Reference
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Config Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#general" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        General
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supported-plugins" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        supported-plugins.*
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#request-duel-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        request.* — duel requests
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#duelmatch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        duel.match.*
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#duel-during-after-the-fight" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        duel.* — during &amp; after the fight
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-and-likes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        data.* and likes.*
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#queue-rating" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        queue.*, rating.*
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spectate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        spectate.*
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#countdown-party" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        countdown.*, party.*
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stats-top" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        stats.*, top.*
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#guis-soup-sounds-misc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        guis.*, soup.*, sounds.*, misc
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../languages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Messages & Languages
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../arenas/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arenas
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Arenas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arenas/regeneration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Regeneration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kits
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../duels/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Duels
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Duels
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../duels/requests/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Requests
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../duels/match-flow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Match Flow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../duels/betting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Betting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../duels/party-duels/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Party Duels
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../duels/rating-stats/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rating & Stats
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../queue/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Queue & Signs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../spectating/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Spectating
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Commands
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Commands
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../commands/player/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Player Commands
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../commands/admin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Admin Commands
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../permissions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Permissions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../placeholders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Placeholders
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GUIs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Integrations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data & Backups
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#general" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        General
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supported-plugins" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        supported-plugins.*
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#request-duel-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        request.* — duel requests
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#duelmatch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        duel.match.*
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#duel-during-after-the-fight" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        duel.* — during &amp; after the fight
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-and-likes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        data.* and likes.*
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#queue-rating" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        queue.*, rating.*
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spectate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        spectate.*
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#countdown-party" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        countdown.*, party.*
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stats-top" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        stats.*, top.*
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#guis-soup-sounds-misc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        guis.*, soup.*, sounds.*, misc
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="configyml-reference"><code>config.yml</code> Reference<a class="headerlink" href="#configyml-reference" title="Permanent link">&para;</a></h1>
+<p>Complete reference for every option (current <code>config-version: 25</code>). New keys merge in automatically on update — your values are never overwritten (see <a href="../">Configuration Overview</a>).</p>
+<h2 id="general">General<a class="headerlink" href="#general" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>lang</code></td>
+<td><code>lang_EN</code></td>
+<td>Message file from <code>langs/</code>: <code>lang_EN</code>, <code>lang_DE</code>, <code>lang_ES</code>, <code>lang_FR</code>, <code>lang_PL</code>, <code>lang_RU</code>, <code>lang_CZ</code></td>
+</tr>
+<tr>
+<td><code>check-for-updates</code></td>
+<td><code>true</code></td>
+<td>Master switch for the update checker. <code>false</code> disables all update network traffic</td>
+</tr>
+<tr>
+<td><code>update-checker.source</code></td>
+<td><code>NONE</code></td>
+<td>Update source. <code>NONE</code> = no checking. <code>CUSTOM</code> + <code>url</code> reads the latest version as plain text from your URL</td>
+</tr>
+<tr>
+<td><code>update-checker.url</code></td>
+<td><code>''</code></td>
+<td>URL returning the latest version (only for <code>CUSTOM</code>)</td>
+</tr>
+<tr>
+<td><code>update-checker.download-url</code></td>
+<td>discord link</td>
+<td>Shown in the update notification</td>
+</tr>
+<tr>
+<td><code>update-checker.notify-in-game</code></td>
+<td><code>true</code></td>
+<td>Also notify players with <code>duels.update.notify</code> on join</td>
+</tr>
+</tbody>
+</table>
+<h2 id="supported-plugins"><code>supported-plugins.*</code><a class="headerlink" href="#supported-plugins" title="Permanent link">&para;</a></h2>
+<p>Only active when the plugin is installed <strong>and</strong> the hook message appears on console.</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>CombatTagPlus/PvPManager/CombatLogX/DeluxeCombat.prevent-duel-if-tagged</code></td>
+<td><code>true</code></td>
+<td>Tagged players cannot start duels</td>
+</tr>
+<tr>
+<td><code>...prevent-tag-in-duel</code></td>
+<td><code>true</code></td>
+<td>No combat tag is applied inside duels</td>
+</tr>
+<tr>
+<td><code>Essentials.auto-unvanish</code></td>
+<td><code>true</code></td>
+<td>Vanished players are unvanished when a duel starts</td>
+</tr>
+<tr>
+<td><code>Essentials.set-back-location</code></td>
+<td><code>true</code></td>
+<td>Prevents <code>/back</code> from returning players into the arena — where they return is set by <code>duel.teleport-to-last-location</code> below</td>
+</tr>
+<tr>
+<td><code>mcMMO.disable-skills-in-duel</code></td>
+<td><code>true</code></td>
+<td>mcMMO skills/abilities blocked in duels</td>
+</tr>
+<tr>
+<td><code>FactionsUUID</code> / <code>Factions.no-power-loss-in-duel</code></td>
+<td><code>true</code></td>
+<td>No faction power loss on duel death</td>
+</tr>
+<tr>
+<td><code>WorldGuard.duelzone.enabled</code> / <code>.regions</code></td>
+<td><code>false</code> / <code>[spawn, lobby]</code></td>
+<td>If enabled, duels can only start inside the listed regions</td>
+</tr>
+<tr>
+<td><code>MyPet.despawn-pet-in-duel</code></td>
+<td><code>false</code></td>
+<td>Despawn pets on duel start</td>
+</tr>
+<tr>
+<td><code>BountyHunters</code> / <code>NotBounties.prevent-bounty-loss-in-duel</code></td>
+<td><code>true</code></td>
+<td>Keep bounty on duel death</td>
+</tr>
+<tr>
+<td><code>SimpleClans.prevent-kdr-change</code></td>
+<td><code>true</code></td>
+<td>Duel kills don't affect clan KDR</td>
+</tr>
+<tr>
+<td><code>LeaderHeads.wins/losses.menu.title</code> + <code>open-command</code></td>
+<td><code>Duel Wins</code> / <code>openwins</code> …</td>
+<td>LeaderHeads board integration</td>
+</tr>
+</tbody>
+</table>
+<h2 id="request-duel-requests"><code>request.*</code> — duel requests<a class="headerlink" href="#request-duel-requests" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>requires-cleared-inventory</code></td>
+<td><code>false</code></td>
+<td>Players need an empty inventory to send/accept requests</td>
+</tr>
+<tr>
+<td><code>prevent-creative-mode</code></td>
+<td><code>false</code></td>
+<td>Creative-mode players cannot duel</td>
+</tr>
+<tr>
+<td><code>use-own-inventory.enabled</code></td>
+<td><code>true</code></td>
+<td>Allow fighting with your own gear instead of a kit. If <code>false</code>, the kit selector opens first</td>
+</tr>
+<tr>
+<td><code>use-own-inventory.drop-inventory-items</code></td>
+<td><code>false</code></td>
+<td><strong>Dangerous:</strong> drops own inventory on death and does NOT restore it. Increase <code>teleport-delay</code> so the winner can loot</td>
+</tr>
+<tr>
+<td><code>use-own-inventory.use-permission</code></td>
+<td><code>false</code></td>
+<td>Gate own-inventory behind <code>duels.use.own-inventory</code></td>
+</tr>
+<tr>
+<td><code>kit-selecting.enabled</code> / <code>.use-permission</code></td>
+<td><code>true</code> / <code>false</code></td>
+<td>Kit picker in the request GUI (<code>duels.use.kit-select</code>)</td>
+</tr>
+<tr>
+<td><code>arena-selecting.enabled</code> / <code>.use-permission</code></td>
+<td><code>true</code> / <code>false</code></td>
+<td>Arena picker in the request GUI (<code>duels.use.arena-select</code>)</td>
+</tr>
+<tr>
+<td><code>item-betting.enabled</code> / <code>.use-permission</code></td>
+<td><code>true</code> / <code>false</code></td>
+<td>Item betting toggle in the request GUI (<code>duels.use.item-betting</code>)</td>
+</tr>
+<tr>
+<td><code>item-betting.allowed-worlds</code></td>
+<td><code>[]</code></td>
+<td>Worlds where item betting is allowed (empty = everywhere). Anti-dupe boundary for cross-world item moves</td>
+</tr>
+<tr>
+<td><code>money-betting.enabled</code> / <code>.use-permission</code></td>
+<td><code>true</code> / <code>false</code></td>
+<td>Money bets via <code>/duel &lt;player&gt; &lt;amount&gt;</code> (<code>duels.use.money-betting</code>, needs Vault)</td>
+</tr>
+<tr>
+<td><code>expiration</code></td>
+<td><code>30</code></td>
+<td>Request expiry in seconds</td>
+</tr>
+</tbody>
+</table>
+<h2 id="duelmatch"><code>duel.match.*</code><a class="headerlink" href="#duelmatch" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>max-duration</code></td>
+<td><code>3</code></td>
+<td>Match time limit in minutes; <code>-1</code> disables</td>
+</tr>
+<tr>
+<td><code>boss-bar.enabled</code></td>
+<td><code>true</code></td>
+<td>Show remaining-time boss bar in the last 2 minutes of timed matches</td>
+</tr>
+<tr>
+<td><code>boss-bar.color</code></td>
+<td><code>RED</code></td>
+<td><code>PINK, BLUE, RED, GREEN, YELLOW, PURPLE, WHITE</code> (invalid values fall back to <code>RED</code>)</td>
+</tr>
+<tr>
+<td><code>boss-bar.style</code></td>
+<td><code>SOLID</code></td>
+<td><code>SOLID, SEGMENTED_6, SEGMENTED_10, SEGMENTED_12, SEGMENTED_20</code></td>
+</tr>
+<tr>
+<td><code>boss-bar.title</code></td>
+<td><code>Time remaining: %time%</code></td>
+<td><code>%time%</code> = <code>m:ss</code></td>
+</tr>
+<tr>
+<td><code>rematch.enabled</code></td>
+<td><code>true</code></td>
+<td>Clickable rematch offer to winner + loser after 1v1 duels</td>
+</tr>
+<tr>
+<td><code>rematch.expire-after</code></td>
+<td><code>300</code></td>
+<td>Offer expiry in seconds (min 10)</td>
+</tr>
+<tr>
+<td><code>start-commands</code></td>
+<td>disabled</td>
+<td>Console commands per player on match start (<code>%player%</code>, <code>{delay:ms}</code>)</td>
+</tr>
+<tr>
+<td><code>end-commands</code></td>
+<td>disabled</td>
+<td>Console commands on match end (<code>%winner%</code>, <code>%loser%</code>, <code>%kit%</code>, <code>%arena%</code>, <code>%bet_amount%</code>, <code>{delay:ms}</code>)</td>
+</tr>
+<tr>
+<td><code>win-commands</code></td>
+<td>disabled</td>
+<td>Same as above but only for the winner</td>
+</tr>
+<tr>
+<td><code>lose-commands</code></td>
+<td>disabled</td>
+<td>Same as above but only for the loser</td>
+</tr>
+<tr>
+<td><code>*.queue-matches-only</code></td>
+<td><code>false</code></td>
+<td>Restrict each command group to queue-started matches</td>
+</tr>
+</tbody>
+</table>
+<h2 id="duel-during-after-the-fight"><code>duel.*</code> — during &amp; after the fight<a class="headerlink" href="#duel-during-after-the-fight" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>projectile-hit-message.enabled</code> / <code>.types</code></td>
+<td><code>true</code> / arrows+trident</td>
+<td>Tell shooters their victim's health on hit</td>
+</tr>
+<tr>
+<td><code>prevent-inventory-open</code></td>
+<td><code>true</code></td>
+<td>Block all non-player inventories in duels</td>
+</tr>
+<tr>
+<td><code>protect-kit-items</code></td>
+<td><code>true</code></td>
+<td>NBT-tag kit items so they can't be used outside duels</td>
+</tr>
+<tr>
+<td><code>remove-empty-bottle</code></td>
+<td><code>true</code></td>
+<td>Delete empty bottles on potion drink (in duel)</td>
+</tr>
+<tr>
+<td><code>prevent-teleport-to-match-players</code></td>
+<td><code>true</code></td>
+<td>Blocks <code>/tpa</code>-style teleports to duelists (bypass: <code>duels.teleport.bypass</code>)</td>
+</tr>
+<tr>
+<td><code>force-allow-combat</code></td>
+<td><code>true</code></td>
+<td>Lets same-faction/team/party members damage each other in duels</td>
+</tr>
+<tr>
+<td><code>cancel-if-moved</code></td>
+<td><code>false</code></td>
+<td>Cancel the duel if a player moves from the request spot</td>
+</tr>
+<tr>
+<td><code>forfeit.enabled</code></td>
+<td><code>true</code></td>
+<td>Allow <code>/duel forfeit</code> (counts as a loss)</td>
+</tr>
+<tr>
+<td><code>enabled-worlds</code></td>
+<td><code>[]</code></td>
+<td>Worlds where dueling works; empty = everywhere (list or <code>"A, B"</code> string)</td>
+</tr>
+<tr>
+<td><code>blacklisted-worlds</code></td>
+<td><code>['world_name_here']</code></td>
+<td>Worlds where dueling is blocked</td>
+</tr>
+<tr>
+<td><code>send-death-messages</code></td>
+<td><code>true</code></td>
+<td>Death messages to match players + spectators</td>
+</tr>
+<tr>
+<td><code>elimination-feed</code></td>
+<td><code>true</code></td>
+<td>Elimination feed in team matches</td>
+</tr>
+<tr>
+<td><code>cooldown</code></td>
+<td><code>0</code></td>
+<td>Seconds before a player may duel again (0 = off)</td>
+</tr>
+<tr>
+<td><code>teleport-to-last-location</code></td>
+<td><code>false</code></td>
+<td>Return winners to their pre-duel spot instead of the lobby</td>
+</tr>
+<tr>
+<td><code>teleport-delay</code></td>
+<td><code>5</code></td>
+<td>Seconds before the winner is teleported out</td>
+</tr>
+<tr>
+<td><code>spawn-firework</code></td>
+<td><code>true</code></td>
+<td>Celebration firework at the death spot (<code>firework.color/type</code>)</td>
+</tr>
+<tr>
+<td><code>arena-only-end-message</code></td>
+<td><code>false</code></td>
+<td>End message only to fighters + spectators instead of server-wide</td>
+</tr>
+<tr>
+<td><code>display-inventories</code></td>
+<td><code>true</code></td>
+<td>Clickable end-of-match inventory preview (<code>/duel inventory &lt;uuid&gt;</code>)</td>
+</tr>
+<tr>
+<td><code>prevent-item-drop</code> / <code>clear-items-after-duel</code></td>
+<td><code>false</code> / <code>true</code></td>
+<td>Block drops, or collect dropped items for cleanup after the match</td>
+</tr>
+<tr>
+<td><code>prevent-item-pickup</code></td>
+<td><code>false</code></td>
+<td>Block ground pickups in duels</td>
+</tr>
+<tr>
+<td><code>limit-teleportation.enabled</code> / <code>.distance-allowed</code></td>
+<td><code>true</code> / <code>5.0</code></td>
+<td>Max teleport distance in duels (ender pearls exempt; <code>-1</code> blocks all)</td>
+</tr>
+<tr>
+<td><code>block-all-commands</code></td>
+<td><code>false</code></td>
+<td>If <code>true</code>, only <code>whitelisted-commands</code> work in duels; otherwise everything except <code>blacklisted-commands</code> works</td>
+</tr>
+</tbody>
+</table>
+<h2 id="data-and-likes"><code>data.*</code> and <code>likes.*</code><a class="headerlink" href="#data-and-likes" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>data.autosave-minutes</code></td>
+<td><code>10</code></td>
+<td>Periodic userdata saves (crash protection). <code>0</code> disables (quit/shutdown saves still run)</td>
+</tr>
+<tr>
+<td><code>data.cache-minutes</code></td>
+<td><code>30</code></td>
+<td>Drop offline players from memory after N minutes (reloaded transparently). <code>0</code> disables</td>
+</tr>
+<tr>
+<td><code>likes.enabled</code></td>
+<td><code>true</code></td>
+<td><code>/duel like</code> / <code>/duel dislike</code> rating of recent opponents</td>
+</tr>
+<tr>
+<td><code>likes.window-minutes</code></td>
+<td><code>30</code></td>
+<td>How long after a match opponents may rate each other (one rating per match)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="queue-rating"><code>queue.*</code>, <code>rating.*</code><a class="headerlink" href="#queue-rating" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>queue.blacklisted-commands</code></td>
+<td><code>[]</code></td>
+<td>Commands blocked while queued</td>
+</tr>
+<tr>
+<td><code>rating.enabled</code></td>
+<td><code>true</code></td>
+<td>ELO rating changes after matches</td>
+</tr>
+<tr>
+<td><code>rating.k-factor</code></td>
+<td><code>32</code></td>
+<td>How strongly one match moves ratings</td>
+</tr>
+<tr>
+<td><code>rating.max-difference</code></td>
+<td><code>400</code></td>
+<td>Max rating gap when queue-matching players</td>
+</tr>
+<tr>
+<td><code>rating.default-rating</code></td>
+<td><code>1400</code></td>
+<td>Starting rating per kit</td>
+</tr>
+<tr>
+<td><code>rating.queue-matches-only</code></td>
+<td><code>false</code></td>
+<td>Only queue matches change ratings</td>
+</tr>
+</tbody>
+</table>
+<h2 id="spectate"><code>spectate.*</code><a class="headerlink" href="#spectate" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>enabled</code></td>
+<td><code>true</code></td>
+<td>Master switch — <code>false</code> disables all spectating with a message</td>
+</tr>
+<tr>
+<td><code>wall-limit.enabled</code> / <code>.radius</code></td>
+<td><code>true</code> / <code>25.0</code></td>
+<td>Leash spectators to the arena area; crossing it teleports them back</td>
+</tr>
+<tr>
+<td><code>requires-cleared-inventory</code></td>
+<td><code>false</code></td>
+<td>Empty inventory required to spectate</td>
+</tr>
+<tr>
+<td><code>use-spectator-gamemode</code></td>
+<td><code>false</code></td>
+<td>Use vanilla spectator mode instead of adventure+flight</td>
+</tr>
+<tr>
+<td><code>add-invisibility-effect</code></td>
+<td><code>true</code></td>
+<td>Invisibility for spectators (ignored with spectator gamemode)</td>
+</tr>
+<tr>
+<td><code>whitelisted-commands</code></td>
+<td>msg-like list</td>
+<td>Commands allowed while spectating</td>
+</tr>
+</tbody>
+</table>
+<h2 id="countdown-party"><code>countdown.*</code>, <code>party.*</code><a class="headerlink" href="#countdown-party" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>countdown.enabled</code></td>
+<td><code>true</code></td>
+<td>Pre-match countdown (length = message list)</td>
+</tr>
+<tr>
+<td><code>countdown.prevent.movement</code> / <code>.launch-projectile</code> / <code>.pvp</code> / <code>.interact</code></td>
+<td>all <code>true</code></td>
+<td>What's frozen during countdown</td>
+</tr>
+<tr>
+<td><code>countdown.duel.messages</code> / <code>.titles</code></td>
+<td>5…1 + GO</td>
+<td>Countdown texts and big titles (same list size required)</td>
+</tr>
+<tr>
+<td><code>countdown.party-duel.*</code></td>
+<td>same</td>
+<td>Same for party duels (<code>%opponents%</code> supported)</td>
+</tr>
+<tr>
+<td><code>party.invite-expiration</code></td>
+<td><code>30</code></td>
+<td>Party invite expiry (seconds)</td>
+</tr>
+<tr>
+<td><code>party.auto-disband-after</code></td>
+<td><code>10</code></td>
+<td>Disband when owner offline N minutes (<code>-1</code> disables)</td>
+</tr>
+<tr>
+<td><code>party.max-size</code></td>
+<td><code>10</code></td>
+<td>Max party members</td>
+</tr>
+<tr>
+<td><code>party.same-size-only</code></td>
+<td><code>true</code></td>
+<td>Only equal-sized parties may duel</td>
+</tr>
+</tbody>
+</table>
+<h2 id="stats-top"><code>stats.*</code>, <code>top.*</code><a class="headerlink" href="#stats-top" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>stats.display-kit-ratings</code> / <code>.display-nokit-rating</code> / <code>.display-past-matches</code></td>
+<td><code>true</code> / <code>false</code> / <code>true</code></td>
+<td>Sections of <code>/duel stats</code></td>
+</tr>
+<tr>
+<td><code>stats.matches-to-display</code></td>
+<td><code>5</code></td>
+<td>Stored/shown past matches per player</td>
+</tr>
+<tr>
+<td><code>top.update-interval</code></td>
+<td><code>5</code></td>
+<td>Leaderboard refresh (minutes)</td>
+</tr>
+<tr>
+<td><code>top.displayed-replacers.*</code></td>
+<td>wins/losses/killstreak/kit/no-kit</td>
+<td>Titles + identifiers for <code>/duel top</code> categories</td>
+</tr>
+</tbody>
+</table>
+<h2 id="guis-soup-sounds-misc"><code>guis.*</code>, <code>soup.*</code>, <code>sounds.*</code>, misc<a class="headerlink" href="#guis-soup-sounds-misc" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>guis.settings.rows</code>, <code>.details-button.slot</code>, <code>.option-button-slots</code>, <code>.send-button.*</code>, <code>.cancel-button.*</code>, <code>.*-button.item</code></td>
+<td>see file</td>
+<td>Layout and materials of the duel request GUI</td>
+</tr>
+<tr>
+<td><code>guis.kit-selector.rows</code>, <code>.arena-selector.rows</code>, <code>.queues.rows</code>, <code>.space-filler-item</code>, <code>.inherit-kit-item-type</code></td>
+<td>2 / 3 / 2</td>
+<td>Paged selector GUIs</td>
+</tr>
+<tr>
+<td><code>soup.hearts-to-regen</code> / <code>.remove-empty-bowl</code> / <code>.cancel-if-already-full</code></td>
+<td><code>3.5</code> / <code>true</code> / <code>true</code></td>
+<td>Mushroom-soup healing in SOUP kits</td>
+</tr>
+<tr>
+<td><code>sounds.*</code></td>
+<td>piano/pling</td>
+<td>Sounds bound to countdown messages (1.8 vs 1.9+ variants)</td>
+</tr>
+<tr>
+<td><code>firework.color</code> / <code>.type</code></td>
+<td><code>AQUA</code> / <code>BALL_LARGE</code></td>
+<td>End-of-match firework style</td>
+</tr>
+<tr>
+<td><code>disable-enderpearl-in-endgame</code></td>
+<td><code>true</code></td>
+<td>No pearls during the endgame window</td>
+</tr>
+<tr>
+<td><code>disable-movement-in-endgame</code></td>
+<td><code>false</code></td>
+<td>Freeze movement during the endgame window</td>
+</tr>
+<tr>
+<td><code>user-not-found</code>, <code>not-in-match</code>, <code>duration-format</code>, <code>no-kit</code>, <code>no-opponent</code></td>
+<td>—</td>
+<td>PlaceholderAPI fallback texts</td>
+</tr>
+<tr>
+<td><code>use-minimessages</code></td>
+<td><code>false</code></td>
+<td>Parse messages as MiniMessage instead of <code>&amp;</code> codes</td>
+</tr>
+<tr>
+<td><code>arena-regen.block-tracking-enabled</code></td>
+<td><code>false</code></td>
+<td>Record and restore arena block changes (see <a href="../../arenas/regeneration/">Regeneration</a>)</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+  
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Advanced Duels documentation
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+  <div class="md-grid">
+    <div class="ad-footer-extra">
+      <span><strong>Advanced Duels</strong> v5.0 &middot; Paper &amp; Spigot 1.21 &middot; Java 21 &middot; Folia supported</span>
+      <nav aria-label="Footer">
+        <a href="../../">Documentation</a>
+        <a href="../../commands/player/">Commands</a>
+        <a href="../../permissions/">Permissions</a>
+        <a href="../../placeholders/">Placeholders</a>
+        <a href="../../api/">Developer API</a>
+      </nav>
+    </div>
+  </div>
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
